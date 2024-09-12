@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Producción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #0056b3;
+        }
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .form-group {
+                flex-direction: row;
+                align-items: center;
+            }
+            .form-group label {
+                flex: 0 0 150px;
+            }
+            .form-group input, .form-group select, .form-group textarea {
+                flex: 1;
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reporte de Producción Silicona / PVC</h1>
+        <form  action="https://formspree.io/f/xdknvaaw"
+        method="POST"  >
+            <div class="form-group">
+                <label for="Operador">Operador:</label>
+                <input type="text" id="operador" name="operador" required>
+            </div>
+            <div class="form-group">
+                <label for="Modulo">Módulo:</label>
+                <input type="text" id="modulo" name="modulo" required>
+            </div>
+            <div class="form-group">
+                <label for="Fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="Silicona / PVC">Silicona / PVC</label>
+                <select id="pvc" name="pvc">
+                    <option value="option1">Silicona</option>
+                    <option value="option2">PVC</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Hora inicio">Hora de Inicio:</label>
+                <input type="time" id="hora_inicio" name="hora_inicio" required>
+            </div>
+            <div class="form-group">
+                <label for="Hora final">Hora Final:</label>
+                <input type="time" id="hora_final" name="hora_final" required>
+            </div>
+            <div class="form-group">
+                <label for="Descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion"></textarea>
+            </div>
+            <div class="form-group">
+                <label for=ON/OFF>ON / OFF</label>
+                <select id="on_off" name="on_off">
+                    <option value="on">ON</option>
+                    <option value="off">OFF</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Cantidad de ciclos">Cantidad de Ciclos:</label>
+                <input type="number" id="cantidad_ciclos" name="cantidad_ciclos" >
+            </div>
+            <div class="form-group">
+                <label for="Produccion">Producción / Desarrollo</label>
+                <select id="produccion" name="produccion">
+                    <option value="option1">Produccion</option>
+                    <option value="option2">Desarrollo</option>
+                </select>
+            </div>  
+            <div class="form-group">
+                <label for="Diseño">Diseño:</label>
+                <input type="text" id="diseño" name="diseño">
+            </div>
+            <div class="form-group">
+                <label for="Numero de moldes">Número de Moldes:</label>
+                <input type="number" id="numero_moldes" name="numero_moldes">
+            </div>
+            <div class="form-group">
+                <label for="Numero de cavidades">Número de Cavidades:</label>
+                <input type="number" id="numero_cavidades" name="numero_cavidades">
+            </div>
+            <div class="form-group">
+                <label for="Numero de colores">Número de Colores:</label>
+                <input type="number" id="numero_colores" name="numero_colores">
+            </div>
+            <div class="form-group">
+                <label for="Produccion por dia">Producción por Día:</label>
+                <input type="number" id="produccion_dia" name="produccion_dia" >
+            </div>
+            <div class="form-group">
+                <label for="Buenas">Buenas:</label>
+                <input type="number" id="buenas" name="buenas" >
+            </div>
+            <div class="form-group">
+                <label for="Malas">Malas:</label>
+                <input type="number" id="malas" name="malas" >
+            </div>
+            <div class="form-group">
+                <label for="Transferidas">Transferidas:</label>
+                <input type="number" id="transferidas" name="transferidas">
+            </div>
+            <div class="form-group">
+                <label for="Comentarios">Comentarios:</label>
+                <textarea id="comentarios" name="comentarios"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar Reporte</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
